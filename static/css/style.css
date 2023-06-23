@@ -1,0 +1,111 @@
+/* Global Styles */
+html,
+body {
+  height: 85vh;
+  margin: 0;
+  padding: 0;
+}
+
+/* Navigation Styles */
+#nav {
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  border-bottom: 1px solid black;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+}
+
+#logo {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  margin: 0.5em;
+}
+
+#logo > h1 {
+  align-self: flex-end;
+  margin-left: 0.5em;
+  /* margin-bottom: 2em; */
+}
+
+#logo-img {
+  max-width: 100%;
+}
+
+#links {
+  margin-right: 1em;
+  margin-bottom: 3em;
+}
+
+/* Page Styles */
+#page-one {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+#about > h2 {
+  align-self: center;
+}
+
+#about > img {
+  max-width: fit-content;
+}
+
+#about {
+  max-width: fit-content;
+  border: 1px dashed purple;
+  display: inline-flex;
+  flex-direction: column;
+}
+
+#scroll-button {
+  border: 5px solid green;
+  /* ... your existing styles ... */
+  position: absolute;
+  bottom: 20px; /* Adjust as needed */
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#page-two {
+  margin: 0;
+  padding: 0;
+  height: 100vh; /* Set a specific height for the page */
+  background-color: lightblue;
+  color: white;
+  display: flex;
+}
+
+/* Eye Styles */
+#eye-container {
+  position: absolute;
+  display: flex;
+  top: 50%;
+  left: 50%;
+  /* transform: translate(-50%, -50%); */
+  z-index: 1;
+}
+
+.pupil {
+  margin: 0 0.7em;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-550%, -100%);
+  width: 10px;
+  height: 10px;
+  background-color: black;
+  border-radius: 50%;
+}
