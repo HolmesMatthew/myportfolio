@@ -5,15 +5,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="{% static 'css/style.css' %}" />
-    <script src="{% static 'js/port.js' %}"></script>
+    <script src="{% static 'js/eye.js' %}"></script>
+    <script src="{% static 'js/scroll.js' %}"></script>
     <title>Matthew Holmes</title>
   </head>
   <body>
     <div id="nav">
-      <!-- <div id="face">
-        <br />
-        <span>--------------------</span>
-      </div> -->
       <div id="logo">
         <a href=""
           ><img
@@ -22,49 +19,55 @@
             src="{% static 'img/transparent-logo.PNG' %}"
             alt=""
           />
+        </a>
+      </div>
+      <div>
+        <div id="face">
+          <div id="head-top"></div>
           <div id="eye-container">
             <div id="left-eye" class="eye"><div class="pupil"></div></div>
             <div id="right-eye" class="eye"><div class="pupil"></div></div>
           </div>
-        </a>
+        </div>
       </div>
-
-      <div id="links">
-        <a href="">Projects</a>
-        <a href="">Contact me</a>
+      <div id="link-div">
+        <a class="links" href="">Projects</a>
+        <a class="links" href="">Contact me</a>
       </div>
     </div>
     <br />
     <div id="page-one">
-      <div id="about">
-        <div id="logo-div">
-          <img
-            style="display: inline-flex"
-            src="http://placekitten.com/200/300"
-            alt="A cat from
-        placekitten"
-          />
-        </div>
-        <h2>About me</h2>
-        <span>img</span>
+      <div>
+        <button id="judgment">Judgment</button>
+      </div>
+      <br />
+      <div id="scroll-button-container">
+        <button id="scroll-lock-button">Turn the Lights on</button>
+      </div>
+      <footer>
+        <button id="scroll-down-button">Scroll Down</button>
+      </footer>
+    </div>
+    <!-- <div class="content"> -->
+    <!-- </div> -->
 
-        <p>
+    <div id="page-two">
+      <div class="img">
+        <img
+          src="http://placekitten.com/200/300"
+          alt="A cat from placekitten"
+        />
+      </div>
+      <div id="about">
+        <h2>About me</h2>
+
+        <p style="text-align: center">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem
           repellendus cumque unde impedit quo aspernatur dolorum dolorem nam
           illum, aut, qui et, inventore eos provident. Laudantium quaerat
           commodi odit. Aspernatur.
         </p>
       </div>
-
-      <div id="scroll-button">
-        <!-- <button id="btn">page 2</button> -->
-      </div>
-    </div>
-    <!-- <div class="content"> -->
-    <!-- </div> -->
-
-    <div id="page-two">
-      <h2>page2</h2>
     </div>
   </body>
 </html>
