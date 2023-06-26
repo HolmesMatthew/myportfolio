@@ -13,9 +13,11 @@ document.addEventListener("DOMContentLoaded", function () {
   var pupilMultiplier = 0.08; // Adjust this value for pupil movement
   var judgment = document.getElementById("judgment");
   var judge = true;
+
   function easeOutCubic(t) {
     return 1 - Math.pow(1 - t, 3);
   }
+
   function updateEyePositions() {
     var faceRect = face.getBoundingClientRect();
     var faceCenterX = faceRect.left + faceRect.width / 2;
@@ -64,6 +66,21 @@ document.addEventListener("DOMContentLoaded", function () {
       -maxPupilTranslationY,
       Math.min(maxPupilTranslationY, pupilTranslationY)
     );
+    var easedEyeTranslationX =
+      eyeTranslationX *
+      easeOutCubic(Math.abs(eyeTranslationY) / maxEyeTranslationY);
+    var easedEyeTranslationY =
+      eyeTranslationY *
+      easeOutCubic(Math.abs(eyeTranslationY) / maxEyeTranslationY);
+    var easedPupilTranslationX =
+      pupilTranslationX *
+      easeOutCubic(Math.abs(eyeTranslationY) / maxEyeTranslationY);
+    var easedPupilTranslationY =
+      pupilTranslationY *
+      easeOutCubic(Math.abs(eyeTranslationY) / maxEyeTranslationY);
+
+    var eyeTransform = `translate(${easedEyeTranslationX}px, ${easedEyeTranslationY}px)`;
+    var pupilTransform = `translate(${easedPupilTranslationX}px, ${easedPupilTranslationY}px)`;
 
     var eyeTransform = `translate(${eyeTranslationX}px, ${eyeTranslationY}px)`;
     var pupilTransform = `translate(${pupilTranslationX}px, ${pupilTranslationY}px)`;
@@ -102,7 +119,6 @@ document.addEventListener("DOMContentLoaded", function () {
       setTimeout(updateEyePositions, 0);
     }
   }
-
   function toggleJudgment() {
     judge = !judge;
     handleFaceVisibility();
@@ -115,7 +131,9 @@ document.addEventListener("DOMContentLoaded", function () {
       rightEye.style.animation = "revealEyes 2s backwards";
     }
   }
+
   judgment.addEventListener("click", toggleJudgment);
+
   window.addEventListener("resize", function () {
     updateEyePositions();
   });
