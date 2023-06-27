@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}" />
     <script src="{% static 'js/eye.js' %}"></script>
     <script src="{% static 'js/scroll.js' %}"></script>
+    <script src="{% static 'js/display.js' %}"></script>
     <title>Matthew Holmes</title>
   </head>
   <body>
@@ -31,50 +32,50 @@
         </div>
       </div>
       <div id="link-div">
+        <button class="links" id="judgment">J</button>
+
         <a class="links" href="">Projects</a>
         <a class="links" href="">Contact me</a>
       </div>
     </div>
     <br />
     <div id="page-one">
-      <div>
-        <div id="about-me">
-          <div class="img">
-            <img
-              src="http://placekitten.com/200/300"
-              alt="A cat from placekitten"
-            />
-          </div>
-          <div id="about">
-            <h2>About me</h2>
-            <p style="text-align: center">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem
-              repellendus cumque unde impedit quo aspernatur dolorum dolorem nam
-              illum, aut, qui et, inventore eos provident. Laudantium quaerat
-              commodi odit. Aspernatur.
-            </p>
-          </div>
+      <div id="about-me">
+        <div class="img">
+          <img
+            src="http://placekitten.com/200/300"
+            alt="A cat from placekitten"
+          />
         </div>
-        <div id="main-display">
-          <div class="display"></div>
-          <div class="display"></div>
-          <div class="display"></div>
+        <div id="about">
+          <h2>About me</h2>
+          <p style="text-align: center">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem
+            repellendus cumque unde impedit quo aspernatur dolorum dolorem nam
+            illum, aut, qui et, inventore eos provident. Laudantium quaerat
+            commodi odit. Aspernatur.
+          </p>
         </div>
         <br />
         <div id="scroll-button-container">
-          <div>
-            <button id="judgment">Judgment</button>
-          </div>
           <!-- <button id="scroll-lock-button">Turn the Lights on</button> -->
         </div>
-        <footer>
-          <button id="scroll-down-button">Scroll Down</button>
-        </footer>
       </div>
+      <footer>
+        <button id="scroll-down-button">Scroll Down</button>
+      </footer>
       <!-- <div class="content"> -->
       <!-- </div> -->
-
-      <div id="page-two"></div>
+    </div>
+    <div id="page-two">
+      <br />
+      <div id="main-display">
+        <div class="display"></div>
+        <div class="display"></div>
+        <div class="display"></div>
+        <button id="prev-button">previous</button>
+        <button id="next-button">next</button>
+      </div>
     </div>
   </body>
 </html>
