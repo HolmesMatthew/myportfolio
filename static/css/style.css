@@ -69,22 +69,51 @@ body.scroll-locked {
   /* padding-bottom: 0; */
   /* margin-bottom: 0; */
 }
-
+#main-display {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  justify-content: space-evenly;
+  margin: 1em;
+}
+.display {
+  width: 32vw;
+  height: 32vw;
+  margin: 0.5em 0 0.5em 0;
+  border: 1px solid black;
+}
+#about {
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  padding: 0;
+}
 #about > h2 {
   align-self: center;
+  margin: 0;
+  padding: 0;
 }
 
 .img {
+  display: flex;
   max-width: fit-content;
   align-self: center;
-  margin-top: 0.5em;
+  margin: 0;
+  padding: 0;
 }
-
+#about-me {
+  display: flex;
+  flex-direction: row;
+}
 #about {
   display: inline-flex;
   flex-direction: column;
   align-content: center;
   margin: 0.5em;
+}
+#about > * {
+  margin: 0;
+  padding: 0;
 }
 
 /* #scroll-down-button {
