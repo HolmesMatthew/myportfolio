@@ -6,8 +6,8 @@ document.addEventListener("DOMContentLoaded", function () {
   var rightPupil = rightEye.querySelector(".pupil");
   var face = document.getElementById("face");
   // initialize with black screen
-  leftEye.style.backgroundColor = "black";
-  rightEye.style.backgroundColor = "black";
+  // leftEye.style.backgroundColor = "black";
+  // rightEye.style.backgroundColor = "black";
 
   var eyeMultiplier = 0.09; // Adjust this value for eye movement
   var pupilMultiplier = 0.08; // Adjust this value for pupil movement
